@@ -1,0 +1,152 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+a {
+   text-decoration: none;
+}
+
+body {
+   background-color: #0c2461;
+   color: snow;
+   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url(/assets/photos/mobile_jo_paris.jpg);
+   background-repeat: no-repeat;
+   background-size: cover ;
+   height: 100vh;
+   background-position: right;
+   letter-spacing: 1px;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.para {
+   max-width: 600px;
+}
+.para p {
+   line-height: 25px;
+}
+header {
+   background-color: white;
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   box-shadow: goldenrod 1px 1px 15px;
+}
+
+.logo img {
+   width: 100px;
+}
+
+nav ul {
+   display: flex;
+   gap: 15px;
+}
+nav ul li a {
+   font-weight: bold;
+}
+
+.container {
+   margin: 0 auto;
+   width: 90vw;
+}
+
+.center {
+   text-align: center;
+}
+
+.underline {
+   margin: 7px auto;
+   width: 240px;
+   height: 2px;
+   background-color: tomato;
+}
+
+.title {
+   margin: 55px auto;
+}
+.title h1 {
+   font-size: 40px;
+}
+
+.sub-title h2 {
+   font-size: 18px;
+}
+.para {
+   margin: 15px auto;
+   text-align: center;
+}
+
+.btn-link {
+   margin: 70px auto;
+   text-align: center;
+}
+
+button {
+   cursor: pointer;
+   background-color: #fad390;
+   border: transparent;
+   border-radius: 5px;
+   letter-spacing: 1.2px;
+   padding: .575rem .95rem;
+   transition: .2s ease-in-out;
+   display: inline-block;
+   text-transform: capitalize;
+}
+
+button a {
+   color: #0c2461;
+   font-weight: bold;
+}
+
+button:hover {
+   background-color: #f8c291;
+   padding: .575rem 1.5rem;
+   border-radius: 10px;
+}
+
+button a:hover {
+   /* color: black; */
+}
+
+@media screen and (min-width: 768px) {
+   body {
+      background-position: center;
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url(/assets/photos/jo_paris.webp);
+   background-repeat: no-repeat;
+   background-size: cover ;
+   height: 100vh;
+   background-position: center;
+
+   }
+   .title h1 {
+      font-size: 70px;
+   }
+   .underline {
+      width: 380px;
+   }
+   .sub-title h2 {
+      font-size: 30px;
+   }
+   .para {
+      margin: 50px auto;
+   }
+   .para p {
+      font-size: 19px;
+   }
+   .para {
+      max-width: 700px;
+   }
+}
+
+
+/* Billetterie */
+
+.com {
+   margin: 25px auto 15px auto;
+}
