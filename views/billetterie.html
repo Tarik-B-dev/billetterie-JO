@@ -15,7 +15,7 @@
       <nav>
          <ul>
             <li><a href="../index.html">Accueil</a></li>
-            <li><a href="infos.html">Contact</a></li>
+            <li><a href="infos.html">Information</a></li>
          </ul>
       </nav>
    </header>
@@ -32,6 +32,7 @@
       </div>
       <form id="places-form">
          <h4>Sélectionnez Votre Billet</h4>
+         <p class="link-info-stade"><span><a href="#info-stade">informations emplacements</a></span></p>
          <div class="groupe-form">
             <label for="ticketCategory">Choisissez votre catégorie :</label>
             <select id="ticketCategory" name="ticketCategory">
@@ -71,6 +72,10 @@
                <label for="prenom">Prénom :</label>
                <input type="text" id="prenom" name="prenom" required />
             </div>
+            <div class="input-groupe">
+               <label for="email">Email :</label>
+               <input type="email" id="email" name="email" required />
+            </div>
          </div>
          <div class="groupe-form payment-form">
             <label for="payment">Choisissez votre mode de paiement :</label>
@@ -90,9 +95,12 @@
                      <button type="submit" id="enigme-submit">Résultat</button>
                </div>
             </div>
-            <button type="submit">Confirmer la Commande</button>
+            <button type="submit" class="commander">Confirmer la Commande</button>
          </div>
       </form>
+      <div id="info-stade" class="info-stade center">
+         <img src="/assets/photos/stade.png" alt="stade de france places">
+      </div>
    </div>
 </body>
 </html>

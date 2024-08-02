@@ -93,7 +93,7 @@ nav ul li a {
    text-align: center;
 }
 
-button, .para-alert a {
+button, .para-alert a, .link-partenaire {
    cursor: pointer;
    background-color: #fad390;
    border: transparent;
@@ -116,9 +116,6 @@ button:hover {
    border-radius: 10px;
 }
 
-button a:hover {
-   /* color: black; */
-}
 
 @media screen and (min-width: 768px) {
    .accueil {
@@ -161,6 +158,16 @@ button a:hover {
 /*______ Billetterie 
 */
 
+.link-info-stade {
+   margin-bottom: 10px;
+}
+.link-info-stade a {
+   color: springgreen;
+}
+.info-stade img {
+   margin-top: 50px;
+   border-radius: 15px;
+}
 .ticket-page {
    width: 100%;
    overflow: hidden;
@@ -277,16 +284,7 @@ input {
    display: none;
 }
 
-.alert {
-   /* background-color: #ffae00b2;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    height: 500px;
-    width: 70vw;
-    border-radius: 15px; */
-}
+
 .para-alert {
    width: 600px;
    max-width: 80vw;
@@ -298,18 +296,70 @@ input {
     flex-direction: column;
     gap: 70px;
     text-align: center;
-    background-color: #0fca5d;
+    background-color: #0fca5dfb;
+    border: 5px solid red;
     padding: 5%;
     border-radius: 20px;
     font-size: 18px;
     color: #111;
     font-weight: bold;
 }
-.para-alert a:hover {
+.para-alert a:hover, .list-partenaire ul li a {
    scale: 1.1;
    color: #043131;
 }
 
 .infos {
    margin-top: 35px;
+}
+.link-partenaire {
+   color: #094c74 !important;
+}
+a {
+   text-decoration: none;
+}
+li {
+   list-style: none;
+}
+
+.list-partenaire ul {
+   margin: 50px auto;
+   display: flex;
+   gap: 30px;
+   flex-direction: column;
+   align-items: center;
+}
+
+.infos h4 {
+   font-size: 25px;
+}
+.link-partenaire a:hover {
+   scale: 1.1 !important;
+}
+.list-recettes ul {
+   margin: 0 auto;
+   width: 700px;
+   max-width: 80vw;
+}
+
+.list-recettes ul li {
+   text-align: center;
+   margin: 30px auto;
+}
+
+#login-admin {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+   display: flex;
+   width: 300px;
+   justify-content: center;
+   flex-direction: column;
+   gap: 30px;
+}
+
+.commander {
+   background-color: #1ed16c;
+   font-weight: bold;
 }
