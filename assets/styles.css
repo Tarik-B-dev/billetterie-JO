@@ -11,24 +11,28 @@ a {
 body {
    background-color: #0c2461;
    color: snow;
-   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-      url(/assets/photos/mobile_jo_paris.jpg);
-   background-repeat: no-repeat;
-   background-size: cover ;
-   height: 100vh;
-   background-position: right;
    letter-spacing: 1px;
    font-family: Arial, Helvetica, sans-serif;
 }
 
+.accueil {
+   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url(/assets/photos/mobile_jo_paris.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 100vh;
+   background-position: right;
+}
 
 
 .para {
    max-width: 600px;
 }
+
 .para p {
    line-height: 25px;
 }
+
 header {
    background-color: white;
    width: 100%;
@@ -46,6 +50,7 @@ nav ul {
    display: flex;
    gap: 15px;
 }
+
 nav ul li a {
    font-weight: bold;
 }
@@ -69,6 +74,7 @@ nav ul li a {
 .title {
    margin: 55px auto;
 }
+
 .title h1 {
    font-size: 40px;
 }
@@ -76,6 +82,7 @@ nav ul li a {
 .sub-title h2 {
    font-size: 18px;
 }
+
 .para {
    margin: 15px auto;
    text-align: center;
@@ -86,7 +93,7 @@ nav ul li a {
    text-align: center;
 }
 
-button {
+button, .para-alert a {
    cursor: pointer;
    background-color: #fad390;
    border: transparent;
@@ -114,39 +121,195 @@ button a:hover {
 }
 
 @media screen and (min-width: 768px) {
-   body {
+   .accueil {
       background-position: center;
       background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-      url(/assets/photos/jo_paris.webp);
-   background-repeat: no-repeat;
-   background-size: cover ;
-   height: 100vh;
-   background-position: center;
+         url(/assets/photos/jo_paris.webp);
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+      background-position: center;
 
    }
+
    .title h1 {
       font-size: 70px;
    }
+
    .underline {
       width: 380px;
    }
+
    .sub-title h2 {
       font-size: 30px;
    }
+
    .para {
       margin: 50px auto;
    }
+
    .para p {
       font-size: 19px;
    }
+
    .para {
       max-width: 700px;
    }
 }
 
 
-/* Billetterie */
+/*______ Billetterie 
+*/
 
+.ticket-page {
+   width: 100%;
+   overflow: hidden;
+}
+
+.img-banner {
+   margin: 0 auto;
+   width: 100vw;
+   /* height: 300px; */
+   /* background-position: center;
+   background: url(/assets/photos/jo_reserver_billet.png);
+   background-repeat: no-repeat;
+   background-size: cover; */
+   /* height: 100vh; */
+   /* background-position: center; */
+}
+
+.img-banner img {
+   /* display: none; */
+   margin: 0 auto;
+
+   width: 100%;
+   display: flex;
+   justify-self: center;
+   /* height: 100%; */
+}
+
+.title-ticket-page {
+   margin: 30px auto;
+}
 .com {
    margin: 25px auto 15px auto;
+}
+.com h3 {
+   font-size: 16px;
+   margin-bottom: 20px;
+}
+
+form {
+   background-color: rgb(4, 46, 46);
+   padding: 27px;
+   border-radius: 15px;
+   box-shadow: 1px 2px 15px #000;
+}
+
+.com, form, #enigme {
+   margin: 15px auto;
+   width: 700px;
+   max-width: 90vw;
+}
+
+.groupe-form {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 25px;
+   align-items: baseline;
+}
+
+h4 {
+   margin: 35px 0 20px 0;
+   color: #ffae00;
+}
+
+select {
+   margin-bottom: 10px;
+   width: 150px;
+   /* display: flex; */
+   /* text-align: center; */
+   padding: 5px;
+   background-color: #8f6b07;
+   color: snow;
+   font-weight: bold;
+   letter-spacing: 1px;
+}
+
+select option {
+   background-color: steelblue;
+   color: black;
+   font-weight: bold;
+   height: 15px;
+}
+option:hover {
+   cursor: pointer;
+}
+input {
+   height: 25px;
+   padding: 2px;
+   font-size: 16px;
+}
+.infos-billet {
+   height: 50px;
+   margin: 15px 0;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+.input-groupe {
+   display: flex;
+   width: 400px;
+   justify-content: space-between;
+}
+.payment-form {
+   margin-top: 25px;
+}
+#payment {
+   width: 220px;
+}
+
+@media screen and (min-width: 700px) {
+
+}
+
+.d-none {
+   display: none;
+}
+
+.alert {
+   /* background-color: #ffae00b2;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    height: 500px;
+    width: 70vw;
+    border-radius: 15px; */
+}
+.para-alert {
+   width: 600px;
+   max-width: 80vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    text-align: center;
+    background-color: #0fca5d;
+    padding: 5%;
+    border-radius: 20px;
+    font-size: 18px;
+    color: #111;
+    font-weight: bold;
+}
+.para-alert a:hover {
+   scale: 1.1;
+   color: #043131;
+}
+
+.infos {
+   margin-top: 35px;
 }

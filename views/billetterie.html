@@ -1,69 +1,78 @@
 <!DOCTYPE html>
 <html lang="fr-FR">
-
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="/assets/styles.css">
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="/assets/styles.css" />
+   <script src="/assets/script.js" defer></script>
    <title>Billetterie</title>
 </head>
-
 <body>
    <header>
       <div class="logo">
-         <img src="/assets/photos/logo.png" alt="logo JO">
+         <img src="/assets/photos/logo.png" alt="logo JO" />
       </div>
       <nav>
          <ul>
             <li><a href="../index.html">Accueil</a></li>
-            <li><a href="#">Billets</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="infos.html">Contact</a></li>
          </ul>
       </nav>
    </header>
-   <div class="container">
-      <div class="title">
-         <h1>Billetterie JO</h1>
+   <div class="container ticket-page">
+      <div class="img-banner">
+         <img src="/assets/photos/jo_reserver_billet.png" alt="image publicitaire pour appeler à réserver un billet" />
       </div>
-      <div class="sub-title">
+      <div class="title center title-ticket-page">
+         <h1>Billetterie JO</h1>
          <h2>Venez vivre l'événement de l'année</h2>
       </div>
       <div class="com">
-         <h3>Acheter Vos Billets en Trois Étapes Simples</h3>
+         <h3>Acheter vos Billets en trois étapes simples</h3>
       </div>
       <form id="places-form">
          <h4>Sélectionnez Votre Billet</h4>
          <div class="groupe-form">
-            <label for="ticketType">Choisissez votre type de billet :</label>
-            <select id="ticketType" name="ticketType">
-               <option value="standard">Place Standard</option>
-               <option value="vip">Billet VIP</option>
-               <option value="premium">Accès Premium</option>
+            <label for="ticketCategory">Choisissez votre catégorie :</label>
+            <select id="ticketCategory" name="ticketCategory">
+               <option value="vip">Classe V.I.P</option>
+               <option value="a">Classe A</option>
+               <option value="b">Classe B</option>
+               <option value="c">Classe C</option>
+               <option value="d">Classe D</option>
+               <option value="e">Classe E</option>
             </select>
          </div>
          <div class="groupe-form">
-            <label for="number-place">Choisissez nombre de billets :</label>
-            <input type="number" name="number-places" id="number-places" min="1" max="100" step="1" value="2"
-               placeholder="Entrez un nombre" required>
-               <div class="infos-billet">
-                  <div class="para-price">
-                     Prix : <span id="price"></span>
-                  </div>
-                  <div class="disponibility">
-                     Place disponible : <span id="price"></span>
-                  </div>
-               </div>
+            <label for="ticketType">Choisissez votre type de billet :</label>
+            <select id="ticketType" name="ticketType">
+               <option value="standard">Standard</option>
+               <option value="psh">Personne en situation d'handicap</option>
+               <option value="psha">PSH Accompagnateur</option>
+            </select>
          </div>
          <div class="groupe-form">
-            <h2>Saisissez Vos Informations</h2>
-            <label for="name">Nom :</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="prenom">Prénom :</label>
-            <input type="text" id="prenom" name="prenom" required>
+            <div>
+               <label for="number-places">Choisissez nombre de billets :</label>
+               <input type="number" name="number-places" id="number-places" min="1" max="10" step="1" value="2" placeholder="Entrez un nombre" required />
+            </div>
          </div>
-
+         <div class="form-groupe infos-billet">
+            <div class="para-price">Prix : <span id="price"></span></div>
+            <div class="disponibility">Place disponible : <span id="availability"></span></div>
+         </div>
+         <h4>Saisissez Vos Informations</h4>
          <div class="groupe-form">
+            <div class="input-groupe">
+               <label for="name">Nom :</label>
+               <input type="text" id="name" name="name" required />
+            </div>
+            <div class="input-groupe">
+               <label for="prenom">Prénom :</label>
+               <input type="text" id="prenom" name="prenom" required />
+            </div>
+         </div>
+         <div class="groupe-form payment-form">
             <label for="payment">Choisissez votre mode de paiement :</label>
             <select id="payment" name="payment">
                <option value="creditCard">Carte de Crédit</option>
@@ -72,13 +81,18 @@
                <option value="culture">Résoudre une énigme</option>
             </select>
          </div>
-
          <div class="groupe-form">
-            <h2>Confirmez et Recevez Vos Billets</h2>
+            <h4>Confirmez et Recevez Vos Billets</h4>
+            <div id="enigme" class="d-none">
+               <div class="intro-enigme">
+                  <p><span>Décoder ce message sécurisé avec le chiffrement de César :</span> <span id="word-enigme"></span></p>
+                     <input type="text">
+                     <button type="submit" id="enigme-submit">Résultat</button>
+               </div>
+            </div>
             <button type="submit">Confirmer la Commande</button>
          </div>
       </form>
    </div>
 </body>
-
 </html>
